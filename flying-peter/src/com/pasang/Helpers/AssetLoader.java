@@ -95,10 +95,10 @@ public class AssetLoader {
 		bar = new TextureRegion(texture, 136, 16, 22, 3);
 		bar.flip(false, true);
 
-		coin = Gdx.audio.newSound(Gdx.files.internal("data/coin.wav"));
-		flap = Gdx.audio.newSound(Gdx.files.internal("data/flap.wav"));
-		dead = Gdx.audio.newSound(Gdx.files.internal("data/dead.wav"));
-		fall = Gdx.audio.newSound(Gdx.files.internal("data/fall.wav"));
+		coin = Gdx.audio.newSound(Gdx.files.internal("data/dead.wav"));
+		flap = Gdx.audio.newSound(Gdx.files.internal("data/pow.wav"));
+		dead = Gdx.audio.newSound(Gdx.files.internal("data/aah.wav"));
+		fall = Gdx.audio.newSound(Gdx.files.internal("data/flap.wav"));
 
 		font = new BitmapFont(Gdx.files.internal("data/text.fnt"));
 		font.setScale(.25f, -.25f);

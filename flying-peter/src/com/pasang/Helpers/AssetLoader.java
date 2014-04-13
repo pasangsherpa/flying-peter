@@ -35,7 +35,7 @@ public class AssetLoader {
 		texture = new Texture(Gdx.files.internal("data/texture1.png"));
 		texture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
 
-		appTitle = new TextureRegion(texture, 0, 405, 218, 25);
+		appTitle = new TextureRegion(texture, 0, 405, 140, 21);
 		appTitle.flip(false, true);
 
 		playButtonUp = new TextureRegion(texture, 0, 335, 57, 33);
@@ -87,12 +87,12 @@ public class AssetLoader {
 		birdAnimation = new Animation(0.06f, birds);
 		birdAnimation.setPlayMode(Animation.LOOP_PINGPONG);
 
-		skullUp = new TextureRegion(texture, 312, 65, 64, 50);
+		skullUp = new TextureRegion(texture, 312, 65, 64, 60);
 		// Create by flipping existing skullUp
 		skullDown = new TextureRegion(skullUp);
 		skullDown.flip(false, true);
 
-		bar = new TextureRegion(texture, 317, 116, 54, 39);
+		bar = new TextureRegion(texture, 316, 126, 56, 4);
 		bar.flip(false, true);
 
 		coin = Gdx.audio.newSound(Gdx.files.internal("data/dead.wav"));

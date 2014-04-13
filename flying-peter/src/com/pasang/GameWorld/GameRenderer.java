@@ -170,9 +170,9 @@ public class GameRenderer {
 	}
 
 	private void drawMenuUI() {
-		batcher.draw(appTitle, 136 / 2 - 56, midPointY - 50,
-				appTitle.getRegionWidth() / 1.2f,
-				appTitle.getRegionHeight() / 1.2f);
+		batcher.draw(appTitle, 136 / 2 - 56, midPointY - 65,
+				110,
+				28);
 
 		for (SimpleButton button : menuButtons) {
 			button.draw(batcher);
@@ -181,55 +181,55 @@ public class GameRenderer {
 	}
 
 	private void drawScoreboard() {
-		batcher.draw(scoreboard, 22, midPointY - 30, 97, 37);
+		batcher.draw(scoreboard, 20, midPointY - 40, 99, 55);
 
-		batcher.draw(noStar, 25, midPointY - 15, 10, 10);
-		batcher.draw(noStar, 37, midPointY - 15, 10, 10);
-		batcher.draw(noStar, 49, midPointY - 15, 10, 10);
-		batcher.draw(noStar, 61, midPointY - 15, 10, 10);
-		batcher.draw(noStar, 73, midPointY - 15, 10, 10);
+		batcher.draw(noStar, 27, midPointY - 15, 10, 10);
+		batcher.draw(noStar, 39, midPointY - 15, 10, 10);
+		batcher.draw(noStar, 51, midPointY - 15, 10, 10);
+		batcher.draw(noStar, 63, midPointY - 15, 10, 10);
+		batcher.draw(noStar, 75, midPointY - 15, 10, 10);
 
 		if (world.getScore() > 2) {
-			batcher.draw(star, 73, midPointY - 15, 10, 10);
+			batcher.draw(star, 75, midPointY - 15, 10, 10);
 		}
 
 		if (world.getScore() > 17) {
-			batcher.draw(star, 61, midPointY - 15, 10, 10);
+			batcher.draw(star, 63, midPointY - 15, 10, 10);
 		}
 
 		if (world.getScore() > 50) {
-			batcher.draw(star, 49, midPointY - 15, 10, 10);
+			batcher.draw(star, 51, midPointY - 15, 10, 10);
 		}
 
 		if (world.getScore() > 80) {
-			batcher.draw(star, 37, midPointY - 15, 10, 10);
+			batcher.draw(star, 39, midPointY - 15, 10, 10);
 		}
 
 		if (world.getScore() > 120) {
-			batcher.draw(star, 25, midPointY - 15, 10, 10);
+			batcher.draw(star, 27, midPointY - 15, 10, 10);
 		}
 
 		int length = ("" + world.getScore()).length();
 
 		AssetLoader.whiteFont.draw(batcher, "" + world.getScore(),
-				104 - (2 * length), midPointY - 20);
+				104 - (2 * length), midPointY - 23);
 
 		int length2 = ("" + AssetLoader.getHighScore()).length();
 		AssetLoader.whiteFont.draw(batcher, "" + AssetLoader.getHighScore(),
-				104 - (2.5f * length2), midPointY - 3);
+				104 - (2.5f * length2), midPointY - 7);
 
 	}
 
 	private void drawRetry() {
-		batcher.draw(retry, 36, midPointY + 10, 66, 14);
+		batcher.draw(retry, 36, midPointY + 18, 66, 14);
 	}
 
 	private void drawReady() {
-		batcher.draw(ready, 36, midPointY - 50, 68, 14);
+		batcher.draw(ready, 24, midPointY - 90, 88, 75);
 	}
 
 	private void drawGameOver() {
-		batcher.draw(gameOver, 24, midPointY - 50, 92, 14);
+		batcher.draw(gameOver, 24, midPointY - 65, 92, 20);
 	}
 
 	private void drawScore() {
@@ -257,7 +257,7 @@ public class GameRenderer {
 
 		// Draw Grass
 		shapeRenderer.setColor(111 / 255.0f, 186 / 255.0f, 45 / 255.0f, 1);
-		shapeRenderer.rect(0, midPointY + 66, 136, 11);
+		shapeRenderer.rect(0, midPointY + 60, 136, 11);
 
 		// Draw Dirt
 		shapeRenderer.setColor(147 / 255.0f, 80 / 255.0f, 27 / 255.0f, 1);

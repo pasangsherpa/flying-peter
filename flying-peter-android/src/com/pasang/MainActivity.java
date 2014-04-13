@@ -81,8 +81,8 @@ public class MainActivity extends AndroidApplication {
 		adParamsBottom.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
 		adParamsBottom.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 
-//		layout.addView(adViewTop, adParamsTop);
-//		layout.addView(adViewBottom, adParamsBottom);
+		layout.addView(adViewTop, adParamsTop);
+		layout.addView(adViewBottom, adParamsBottom);
 
 		// Hook it all up
 		setContentView(layout);

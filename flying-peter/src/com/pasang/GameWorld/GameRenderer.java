@@ -43,7 +43,7 @@ public class GameRenderer {
 
 	// Game Assets
 	private TextureRegion bg, grass, birdMid, skullUp, skullDown, bar, ready,
-			appTitle, gameOver, highScore, scoreboard, star, noStar, retry;
+			appTitle, gameOver, highScore, scoreboard, star, noStar, retry, tap;
 	private Animation birdAnimation;
 
 	// Tween stuff
@@ -100,6 +100,7 @@ public class GameRenderer {
 		highScore = AssetLoader.highScore;
 		scoreboard = AssetLoader.scoreboard;
 		retry = AssetLoader.retry;
+		tap = AssetLoader.tap;
 		star = AssetLoader.star;
 		noStar = AssetLoader.noStar;
 	}
@@ -170,9 +171,7 @@ public class GameRenderer {
 	}
 
 	private void drawMenuUI() {
-		batcher.draw(appTitle, 136 / 2 - 56, midPointY - 65,
-				110,
-				28);
+		batcher.draw(appTitle, 136 / 2 - 56, midPointY - 65, 110, 28);
 
 		for (SimpleButton button : menuButtons) {
 			button.draw(batcher);
@@ -225,7 +224,8 @@ public class GameRenderer {
 	}
 
 	private void drawReady() {
-		batcher.draw(ready, 24, midPointY - 90, 88, 75);
+		batcher.draw(ready, 24, midPointY - 70, 88, 20);
+		batcher.draw(tap, 45, midPointY - 40, 50, 30);
 	}
 
 	private void drawGameOver() {
@@ -241,7 +241,7 @@ public class GameRenderer {
 	}
 
 	private void drawHighScore() {
-		batcher.draw(highScore, 22, midPointY - 50, 96, 14);
+		batcher.draw(highScore, 21, midPointY - 60, 96, 14);
 	}
 
 	public void render(float delta, float runTime) {
@@ -268,7 +268,7 @@ public class GameRenderer {
 		batcher.begin();
 		batcher.disableBlending();
 
-		batcher.draw(bg, 0, midPointY - 35, 136, 105);
+		batcher.draw(bg, 0, midPointY - 20, 136, 90);
 
 		drawGrass();
 		drawPipes();

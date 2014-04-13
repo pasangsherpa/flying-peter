@@ -16,7 +16,7 @@ public class AssetLoader {
 	public static Animation birdAnimation;
 	public static TextureRegion bird, birdDown, birdUp, bg, grass, skullUp,
 			skullDown, bar, playButtonUp, playButtonDown, appTitle,
-			logo, ready, gameOver, highScore, scoreboard, star, noStar, retry;
+			logo, ready, gameOver, highScore, scoreboard, star, noStar, retry, tap;
 	public static Sound dead, flap, coin, fall;
 	public static BitmapFont font, whiteFont, shadow;
 	public static Preferences prefs;
@@ -38,22 +38,25 @@ public class AssetLoader {
 		appTitle = new TextureRegion(texture, 0, 536, 395, 54);
 		appTitle.flip(false, true);
 
-		playButtonUp = new TextureRegion(texture, 0, 335, 59, 35);
+		playButtonUp = new TextureRegion(texture, 0, 588, 105, 64);
 		playButtonUp.flip(false, true);
 
-		playButtonDown = new TextureRegion(texture, 59, 335, 59, 35);
+		playButtonDown = new TextureRegion(texture, 0, 588, 105, 64);
 		playButtonDown.flip(false, true);
 
-		ready = new TextureRegion(texture, 512, 130, 200, 160);
+		ready = new TextureRegion(texture, 512, 130, 176, 51);
 		ready.flip(false, true);
 
-		gameOver = new TextureRegion(texture, 512, 418, 203, 55);
+		tap = new TextureRegion(texture, 512, 194, 114, 60);
+		tap.flip(false, true);
+
+		gameOver = new TextureRegion(texture, 512, 418, 203, 52);
 		gameOver.flip(false, true);
 
-		highScore = new TextureRegion(texture, 117, 370, 96, 16);
+		highScore = new TextureRegion(texture, 512, 471, 193, 35);
 		highScore.flip(false, true);
 		
-		retry = new TextureRegion(texture, 117, 388, 66, 16);
+		retry = new TextureRegion(texture, 454, 512, 270, 29);
 		retry.flip(false, true);
 
 		scoreboard = new TextureRegion(texture, 512, 294, 240, 123);
